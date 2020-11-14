@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ @font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+body{
+    background-color: aliceblue;
+}
+main{
+    width: 70%;
+    padding: 50px;
+    margin: auto;
+    background-color: rgb(229, 243, 227);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.photo{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: cornsilk;
+    transition: all 3s ease ;
+    border: 2px lavenderblush;
+    border-radius: 200px;
+    box-shadow: 10px 10px rgb(235, 217, 233);
+}
+.photo:hover{
+    transform: rotate(360deg) scale(1.08);
+
+}
+h1{
+    width: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 48px;
+    font-family: cursive;
+}
+.photo1{
+    background-image: url(../images/iwaoi.png);
+    background-size: 100%;
+}
+.photo2{
+    background-image: url(../images/KageHina.jpg);
+    background-size: 100%;
+}
+.photo3{
+    background-image: url(../images/kuroken.jpg);
+    background-size: 100%;
+}
+.photo4{
+    background-image: url(../images/bokuaka.jpg);
+    background-size: 100%;
+}
+.photo5{
+    background-image: url(../images/hch.png);
+    background-size: 100%;
+}
+.photo6{
+    background-image: url(../images/LanWangji.png);
+    background-size: 100%;
+}
+.photo7{
+    background-image: url(../images/lb.jpg);
+    background-size: 100%;
+}
+.photo8{
+    background-image: url(../images/sll.jpg);
+    background-size: 100%;
+}
+.photo9{
+    background-image: url(../images/WeiWuxian.jpg);
+    background-size: 100%;
+}
+.photo10{
+    background-image: url(../images/sh.jpg);
+    background-size: 100%;
+}
+.photo11{
+    background-image: url(../images/lk.png);
+    background-size: 100%;
+}
+.photo12{
+    background-image: url(../images/пр.png);
+    background-size: 100%;
+}
