@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="
+https://fonts.googleapis.com/css?family=Roboto:300,500&map;subset=cyrillic
+">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            text-align: center;
+            font-size: 16px;
+        }
+        body{
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #f2f2f2;
+        }
+        .form-container{
+            background-color: #fff;
+            max-width: 450px;
+            width: 95%;
+            margin: auto;
+            padding: 40px;
+        }
+
+        #form{
+
+        }
+
+        input{
+            display: block;
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0.4rem 0;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .form-heading{
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+    </style>
+    <title>Form to contact</title>
+</head>
+<body>
+    <div class="form-container">
+        <h3 class="form-heading">Form to contact</h3>
+        <form action="https://getsimpleform.com/messages?form_api_token=3195e8c6443c0be63c64d21dc6717fe3" method="post">
+            <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+            <input type='hidden' name='redirect_to' value='http://IboLs.github.io/form'/>
+            <div class="field">
+                <label for="name">Username</label>
+                <input type="text" id="name">
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto">
+            </div>
+                <input type="submit" id="submit">
+             </form>
+         </div>
+
+         <script>
+             var inputs = [].slice.call(document.querySelectorAll("input"));
+
+             console.log(inputs);
+
+             inputs.forEach(function(input){
+                 if((input.getAttribute("type") !== "submit") && (input.getAttribute("type") !== "hidden")){
+                     console.log(input);
+                     if(input.value !== ''){
+                         var label = document.querySelector('label[for="' + input.id + '"]');
+                         label.classlist.add("focused");
+                     }
+                     input.addEventListener("focusin", focusInHandler);
+                     input.addEventListener("focusout", focusOutHandler);
+                 }
+                });
+
+                function focusInHandler(){
+                    var label = document.querySelector('label[for="' + '"]');
+                    label.classlist.add("focused");
+                    //console.log(label);
+                    //console.log(this.id + "focus in");
+                }
+
+                function focusOutHandler(){
+                    var label = document.querySelector('label[for="' + '"]');
+                    //console.log(label);
+                    //console.log(this.id + "focus in");
+                        if(this.value == ''){
+                        label.classlist.remove("focused");
+                    }
+                }
+
+                
+
+
+
+               
+         </script>
+</body>
+</html>
